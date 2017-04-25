@@ -7,15 +7,16 @@ var router = express.Router();
 
 function genSmallElementsArray(array) {
 	var slimArray = [];
-	for (elem in array) {
+	array.forEach((index, value) => {
 		slimArray.push({
-			"symbol" : elem.symbol,
-			"name" : elem.name
-		})
-	}
+			"symbol" : value.symbol,
+			"name" : value.name
+		});
+	});
 }
 
-var elementsArray = JSON.parse(fs.readFileSync('./elements.json'));
+var contents = fs.readFileSync('./elements.json')
+var elementsArray = JSON.parse(contents);
 var elementsSlim = genSmallElementsArray(elementsArray);
 
 router.get('/', (req, res, next) => {
