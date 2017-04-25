@@ -19,7 +19,7 @@ var elementsArray = JSON.parse(fs.readFileSync('./elements.json'));
 var elementsSlim = genSmallElementsArray(elementsArray);
 
 router.get('/', (req, res, next) => {
-	res.send(slimArray);
+	res.send(elementsSlim);
 });
 
 router.get('/:number', (req, res, next) => {
