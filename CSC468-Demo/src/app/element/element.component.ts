@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Element } from 'element';
 
 @Component({
   selector: 'app-element',
@@ -12,7 +13,6 @@ export class ElementComponent implements OnInit {
   ngOnInit() {
   }
 
-  @Input() symbol: string = "Be"
-  @Input() name: string = "Berrylium"
+  @Input() element: Element
 
 }

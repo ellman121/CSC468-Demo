@@ -1,5 +1,12 @@
 <div *ngIf="errors" class="errors">{{errors}}</div>
 
+<table>
+  <tr *ngFor="let row of rows">
+    <td *ngFor="let id of row">
+      <app-element [element]="elements[id]"></app-element>
+    </td>
+  </tr>
+</table>
 <div *ngFor="let element of elements">
   <app-element [symbol]="element.symbol" [name]="element.name"></app-element>
 </div>

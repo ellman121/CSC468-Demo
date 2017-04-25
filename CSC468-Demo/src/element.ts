@@ -24,4 +24,7 @@ export class ElementDetails {
 export class Element {
   name: string
 	number: number
+  symbol: string
+  xpos: number
+  ypos: number
 }

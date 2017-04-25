@@ -11,7 +11,10 @@ function genSlimElementsArray(array) {
 		console.log(value);
 		slimArray.push({
 			"symbol" : value.symbol,
-			"name" : value.name
+			"name" : value.name,
+			"number": value.number,
+			"xpos": value.xpos,
+			"ypos": value.ypos
 		});
 	});
 	return slimArray;
