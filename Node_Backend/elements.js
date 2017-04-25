@@ -13,6 +13,7 @@ function genSmallElementsArray(array) {
 			"name" : value.name
 		});
 	});
+	return slimArray;
 }
 
 var contents = fs.readFileSync('./elements.json')
