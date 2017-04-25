@@ -9,10 +9,10 @@ export class ElementService {
 
   getElements(): Promise<{[key: string]: any}[]> {
     return this.http.get("/api/elements/").toPromise().then(
-      (val) => val.json(),
+      (val) => Promise.resolve(val.json() as {[key: string]: any}[]),
       (reason) => {
         console.log("http failure", reason);
-        return "Server Connection failed"
+        return Promise.reject("Server Connection failed")
       }
     )
   }
