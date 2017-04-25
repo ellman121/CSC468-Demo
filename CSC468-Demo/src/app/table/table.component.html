@@ -1,0 +1,5 @@
+<div *ngIf="errors" class="errors">{{errors}}</div>
+
+<div *ngFor="let element of elements">
+  <app-element [symbol]="element.symbol" [name]="element.name"></app-element>
+</div>

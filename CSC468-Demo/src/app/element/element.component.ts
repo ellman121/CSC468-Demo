@@ -12,7 +12,7 @@ export class ElementComponent implements OnInit {
   ngOnInit() {
   }
 
-  @Input() symbol: string
-  @Input() name: string
+  @Input() symbol: string = "Be"
+  @Input() name: string = "Berrylium"
 
 }
