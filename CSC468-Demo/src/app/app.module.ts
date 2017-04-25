@@ -6,9 +6,10 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { ElementComponent } from './element/element.component';
 import { TableComponent } from './table/table.component';
-import { MaterialModule } from '@angular/material';
 
 import 'rxjs/add/operator/toPromise'
+
+import { MaterialModule } from '@angular/material'
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import 'rxjs/add/operator/toPromise'
   imports: [
     BrowserModule,
     FormsModule,
+	MaterialModule,
     HttpModule
   ],
   providers: [],
