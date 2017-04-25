@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { ElementComponent } from './element/element.component';
 import { TableComponent } from './table/table.component';
 
+import 'rxjs/add/operator/toPromise'
+
 @NgModule({
   declarations: [
     AppComponent,

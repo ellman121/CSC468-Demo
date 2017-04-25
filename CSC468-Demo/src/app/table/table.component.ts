@@ -17,6 +17,7 @@ export class TableComponent implements OnInit {
   ngOnInit() {
     this.es.getElements().then(
       (elements) => {
+        console.log(elements)
         this.elements = elements
       },
       (reason) => {
