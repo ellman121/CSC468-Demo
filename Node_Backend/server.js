@@ -11,3 +11,5 @@ var app = express();
 app.disable('etag');
 
 app.use('/api', require('./api.js'));
+
+app.listen('3000');
