@@ -5,7 +5,7 @@ var router = express.Router();
 
 // Prebuild things for fetching later
 
-function trimToSize(array) {
+function genSmallElementsArray(array) {
 	var slimArray = [];
 	for (elem in array) {
 		slimArray.push({
@@ -16,7 +16,7 @@ function trimToSize(array) {
 }
 
 var elementsArray = JSON.parse(fs.readFileSync('./elements.json'));
-var elementsSlim = trimToSize(elementsArray);
+var elementsSlim = genSmallElementsArray(elementsArray);
 
 router.get('/', (req, res, next) => {
 	res.send(slimArray);
