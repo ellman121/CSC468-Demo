@@ -10,4 +10,4 @@ var httpstatus = require('http-status');
 var app = express();
 app.disable('etag');
 
-app.use(bodyParser.json());
+app.use('/api', require('./api.js'));
