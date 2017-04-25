@@ -1,15 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http'
 import {  Operator, Observable } from 'rxjs';
+import { Element } from 'element'
 
 @Injectable()
 export class ElementService {
 
   constructor(private http: Http) { }
 
-  getElements(): Promise<{[key: string]: any}[]> {
+  getElements(): Promise<Element[]> {
     return this.http.get("/api/elements/").toPromise().then(
-      (val) => Promise.resolve(val.json() as {[key: string]: any}[]),
+      (val) => Promise.resolve(val.json() as Element[]),
       (reason) => {
         console.log("http failure", reason);
         return Promise.reject("Server Connection failed")
