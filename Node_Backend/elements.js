@@ -7,7 +7,8 @@ var router = express.Router();
 
 function genSmallElementsArray(array) {
 	var slimArray = [];
-	array.forEach((index, value) => {
+	array.forEach((value, index) => {
+		console.log(value);
 		slimArray.push({
 			"symbol" : value.symbol,
 			"name" : value.name
