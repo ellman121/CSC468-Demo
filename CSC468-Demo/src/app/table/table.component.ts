@@ -22,11 +22,10 @@ export class TableComponent implements OnInit {
         console.log(elements)
         this.rows = []
         elements.forEach(element => {
-          element.xpos
-          if(!this.rows[element.ypos]) {
-            this.rows[element.ypos] = []
+          if(!this.rows[element.ypos-1]) {
+            this.rows[element.ypos-1] = []
           }
-          this.rows[element.ypos][element.xpos] = element.number
+          this.rows[element.ypos-1][element.xpos-1] = element.number
         });
         this.elements = elements
       },
