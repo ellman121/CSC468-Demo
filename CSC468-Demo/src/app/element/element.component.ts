@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Element } from 'element';
 
 @Component({
@@ -14,5 +14,10 @@ export class ElementComponent implements OnInit {
   }
 
   @Input() element: Element
+  //@Output() click = new EventEmitter<number>()
+
+  onClick() {
+    //this.click.emit(this.element.number)
+  }
 
 }

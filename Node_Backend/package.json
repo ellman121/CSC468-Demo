@@ -4,8 +4,6 @@
   "main": "server.js",
   "author": "Elliott Rarden",
   "dependencies": {
-    "@angular/core": "^4.0.3",
-    "@angular/material": "^2.0.0-beta.3",
     "body-parser": "*",
     "express": "*",
     "fs": "0.0.1-security",
@@ -13,7 +11,5 @@
     "nodemon": "^1.11.0"
   },
   "devDependencies": {
-    "@angular/cli": "^1.0.1",
-    "@angular/http": "^4.0.3"
   }
 }

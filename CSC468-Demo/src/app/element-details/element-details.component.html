@@ -1,0 +1,13 @@
+<h1 md-dialog-title *ngIf="details; else errorHeader">{{details.name}}</h1>
+<ng-template #errorHeader>
+  <h1 md-dialog-title>Error</h1>
+</ng-template>
+<div md-dialog-content>
+  <div class="errors" *ngIf="errors">
+    {{errors}}
+  </div>
+  <div *ngIf="details">
+    <h3>{{details.name}}</h3>
+  </div>
+</div>
+<div md-dialog-actions></div>

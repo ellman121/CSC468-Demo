@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ElementService } from 'app/element.service';
+import { MdDialog } from '@angular/material';
 import { Element } from 'element'
+import { ElementDetailsComponent } from 'app/element-details/element-details.component'
 
 @Component({
   selector: 'app-table',
@@ -10,7 +12,7 @@ import { Element } from 'element'
 })
 export class TableComponent implements OnInit {
 
-  constructor(private es: ElementService) { }
+  constructor(private es: ElementService, public dialog: MdDialog) { }
 
   rows: number[][] = []
   elements: {[key: string]: any}[] = []
@@ -33,6 +35,13 @@ export class TableComponent implements OnInit {
         this.errors = reason
       }
     )
+  }
+
+  showDetails(id: number) {
+    console.log("id", id)
+    var dialog = this.dialog.open(ElementDetailsComponent)
+    dialog.componentInstance.id = id
+    dialog.componentInstance.ngOnChanges()
   }
 
 }

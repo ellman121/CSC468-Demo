@@ -30,7 +30,7 @@ router.get('/', (req, res, next) => {
 router.get('/:number', (req, res, next) => {
 	var number = req.params.number;
 
-	res.send(elementsArray[number]);
+	res.send(elementsArray[number-1]);
 	// return elementsArray[number];
 });
 

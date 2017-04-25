@@ -3,7 +3,7 @@
 <table>
   <tr *ngFor="let row of rows">
     <td *ngFor="let id of row">
-      <app-element *ngIf="id" [element]="elements[id-1]"></app-element>
+      <app-element *ngIf="id" [element]="elements[id-1]" (click)="showDetails(id)"></app-element>
     </td>
   </tr>
 </table>
