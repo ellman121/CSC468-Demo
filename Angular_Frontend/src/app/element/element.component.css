@@ -1,15 +1,21 @@
 .symbol {
+	margin-top: 20px;
 	font-size: 1em;
-  text-align: center;
+	font-weight: bold;
+	text-align: center;
 }
 
 .name {
-	font-size: 0.7em;
-  text-align: center;
+	font-size: 0.5em;
+	text-align: center;
 }
 
 .element {
-	border: solid;
+	height: 80px;
+
+	border-style: solid;
+	border-color: black;
+	border-width: 2px;
 }
 
 .Solid {
