@@ -3,13 +3,16 @@
   "description": "About my awesome project",
   "main": "server.js",
   "author": "Elliott Rarden",
+  "scripts": {
+    "nodemon": "nodemon"
+  },
   "dependencies": {
     "body-parser": "*",
     "express": "*",
     "fs": "0.0.1-security",
-    "http-status": "*",
-    "nodemon": "^1.11.0"
+    "http-status": "*"
   },
   "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }

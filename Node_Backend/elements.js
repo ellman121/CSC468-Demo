@@ -8,7 +8,6 @@ var router = express.Router();
 function genSlimElementsArray(array) {
 	var slimArray = [];
 	array.forEach((value, index) => {
-		console.log(value);
 		slimArray.push({
 			"symbol" : value.symbol,
 			"name" : value.name,
@@ -24,13 +23,13 @@ var elementsArray = JSON.parse(fs.readFileSync('./elements.json'));
 var elementsSlim = genSlimElementsArray(elementsArray);
 
 router.get('/', (req, res, next) => {
-	res.send(elementsSlim);
+	res.json(elementsSlim);
 });
 
 router.get('/:number', (req, res, next) => {
 	var number = req.params.number;
 
-	res.send(elementsArray[number-1]);
+	res.json(elementsArray[number-1]);
 	// return elementsArray[number];
 });
 
