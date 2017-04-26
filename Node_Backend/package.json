@@ -3,17 +3,17 @@
   "description": "About my awesome project",
   "main": "server.js",
   "author": "Elliott Rarden",
+  "scripts": {
+    "nodemon": "nodemon"
+  },
   "dependencies": {
-    "@angular/core": "^4.0.3",
-    "@angular/material": "^2.0.0-beta.3",
     "body-parser": "*",
+    "compression": "^1.6.2",
     "express": "*",
     "fs": "0.0.1-security",
-    "http-status": "*",
-    "nodemon": "^1.11.0"
+    "http-status": "*"
   },
   "devDependencies": {
-    "@angular/cli": "^1.0.1",
-    "@angular/http": "^4.0.3"
+    "nodemon": "^1.11.0"
   }
 }

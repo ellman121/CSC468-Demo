@@ -1,0 +1,9 @@
+<div *ngIf="errors" class="errors">{{errors}}</div>
+
+<table class="periodicTable">
+  <tr *ngFor="let row of rows">
+    <td *ngFor="let id of row">
+      <app-element *ngIf="id" [element]="elements[id-1]" (click)="showDetails(id)"></app-element>
+    </td>
+  </tr>
+</table>

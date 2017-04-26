@@ -1,0 +1,26 @@
+<h1 md-dialog-title *ngIf="details">{{details.name}}</h1>
+<h1 md-dialog-title *ngIf="errors">Error</h1>
+<div md-dialog-content>
+  <div class="errors" *ngIf="errors">
+    {{errors}}
+  </div>
+  <div *ngIf="details">
+    <p>Atomic Number: {{details.number}}</p>
+    <p>Atomic Mass: {{details.atomic_mass}}</p>
+    <p>{{details.summary}}</p>
+    <p>
+      <span *ngIf="details.appearance">{{details.appearance}},</span>
+      <span>{{details.category}}</span>
+    </p>
+    <p *ngIf="details.discovered_by">Discovered by {{details.discovered_by}}</p>
+    <p *ngIf="details.named_by">Named By: {{details.named_by}}</p>
+    <p>Melting Point: {{details.melt}}K</p>
+    <p>Boiling Point: {{details.boil}}K</p>
+    <p>Density: {{details.density}}g/cm<sup>3</sup></p> <!-- prettify that fraction -->
+    <p>Molar Heat: {{details.molar_heat}}J/mol·K</p> <!-- that one too.-->
+  </div>
+  <div *ngIf="awaiting">
+    <md-spinner></md-spinner>
+  </div>
+</div>
+<div md-dialog-actions></div>

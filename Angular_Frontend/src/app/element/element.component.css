@@ -1,0 +1,25 @@
+.symbol {
+	font-size: 1em;
+  text-align: center;
+}
+
+.name {
+	font-size: 0.7em;
+  text-align: center;
+}
+
+.element {
+	border: solid;
+}
+
+.Solid {
+	background-color: rgb(224, 176, 30);
+}
+
+.Liquid {
+	background-color: rgb(13, 46, 108);
+}
+
+.Gas {
+	background-color: rgb(143, 146, 166);
+}
