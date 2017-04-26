@@ -13,7 +13,8 @@ function genSlimElementsArray(array) {
 			"name" : value.name,
 			"number": value.number,
 			"xpos": value.xpos,
-			"ypos": value.ypos
+			"ypos": value.ypos,
+			"phase": value.phase
 		});
 	});
 	return slimArray;

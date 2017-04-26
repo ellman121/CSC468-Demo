@@ -27,4 +27,5 @@ export class Element {
   symbol: string
   xpos: number
   ypos: number
+  phase: string
 }
