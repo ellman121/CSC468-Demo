@@ -17,6 +17,7 @@ export class ElementDetailsComponent implements OnInit {
   private lastId: number
   errors: string
   details: ElementDetails
+  awaiting = true
 
   ngOnInit() {
 
@@ -25,12 +26,15 @@ export class ElementDetailsComponent implements OnInit {
   ngOnChanges() {
     console.log('details id', this.id)
     if (this.id != this.lastId && !!this.id) {
+      this.awaiting = true
       this.lastId = this.id
       this.es.getElementDetails(this.id).then(
         (details) => {
+          this.awaiting = false
           this.details = details
         },
         (reason) => {
+          this.awaiting = false
           this.errors = reason
         }
       )
