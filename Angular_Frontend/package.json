@@ -9,23 +9,26 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-prod": "ng build --target=production --aot"
+    "build-prod": "ng build --target=production --aot",
+    "tns-build": "tns build android --compileSdk 22"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^4.0.3",
-    "@angular/common": "^4.0.0",
-    "@angular/compiler": "^4.0.0",
-    "@angular/core": "^4.0.3",
-    "@angular/forms": "^4.0.0",
-    "@angular/http": "^4.0.0",
+    "@angular/animations": "4.1.0",
+    "@angular/common": "4.1.0",
+    "@angular/compiler": "4.1.0",
+    "@angular/core": "4.1.0",
+    "@angular/forms": "4.1.0",
+    "@angular/http": "4.1.0",
     "@angular/material": "^2.0.0-beta.3",
-    "@angular/platform-browser": "^4.0.0",
-    "@angular/platform-browser-dynamic": "^4.0.0",
-    "@angular/router": "^4.0.0",
-    "core-js": "^2.4.1",
-    "rxjs": "^5.3.0",
-    "zone.js": "^0.8.4"
+    "@angular/platform-browser": "4.0.0",
+    "@angular/platform-browser-dynamic": "4.0.0",
+    "@angular/router": "4.0.0",
+    "core-js": "2.4.1",
+    "rxjs": "5.3.0",
+    "tns-android": "^2.5.0",
+    "tns-core-modules": "2.5.2",
+    "zone.js": "0.8.4"
   },
   "devDependencies": {
     "@angular/cli": "1.0.1",
@@ -45,5 +48,11 @@
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
     "typescript": "~2.2.0"
+  },
+  "nativescript": {
+    "id": "org.nativescript.AngularFrontend",
+    "tns-ios": {
+      "version": "2.5.0"
+    }
   }
 }
